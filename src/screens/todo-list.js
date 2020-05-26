@@ -17,6 +17,10 @@ class TodoList extends Component {
         todos: [],
         status: Status.HIDDEN // status can be 'hidden' or 'visible
     }
+    componentDidMount() {
+
+
+    }
 
     requestAddTodo = () => {
         this.setState({
@@ -77,7 +81,7 @@ const styles = StyleSheet.create({
     addTodo: { borderColor: 'gray', borderWidth: 1, alignItems: 'center', padding: 16, justifyContent: 'center', backgroundColor: 'white' }
 })
 const mapStateToProps = (state) => ({
-    todos: state.todos.todo,
+    todos: state.todos,
 })
 const mapDispatchToProps = (dispatch) => ({
     setTodos: (todos) => dispatch(Actions.setTodos(todos))
